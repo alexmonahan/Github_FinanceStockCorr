@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Article</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/supersized.css">
+  <link rel="stylesheet" href="css/jquery-ui.custom.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/480.css" type= "text/css" media="only screen and (max-device-width: 480px)" />
+  <link rel="stylesheet" href="css/handheld.css" type="text/css" media="handheld">
+  <script src="js/libs/modernizr-1.7.min.js"></script>
+  <script src="js/libs/fullscreen.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+  </head>
+
+  <body class="thisArticle">
+    <div id="wrapper">
+
+
+
+      <div class="thisSection"> Stock Market Indices, Correlation </div>
+
+      <div class="articleTitle"> Analyzing Worldwide Stock Prices </div>
+
+      <div class="summary"> Construction of a Correlation Coefficient Matrix for Major Stock Market Indices </div>
+
+      <div class="articleMainPicture"> <img id= "articlePic" src="img/index2.jpg" width="714" height="409"/> </div>
+
+      <div class="pictureCaption"> In this analysis, the price of the STOXX Europe Index has a correlation coefficient of -0.15 with the price of the Argentinian MERVAL Index. </div>
+
+      <div class="writtenBy"><div>By <spanner>ALEX MONAHAN</spanner></div>
+        <div class="artDate">Updated Dec. 8, 2016 2:47 p.m. ET</div>
+      </div>
+      <article class="myWriting">
+
+
+
+
+        <div class="artText"> We analyze correlations between major stock market indices around the world in this quick snapshot report. Previously, we analyzed correlations between ten-year government bond yields of different countries and also correlations of currencies from around the world. In these analyses, we discovered a variety of odd relationships between bond yields of different countries and also between different currencies. For example, our analysis showed that historical ten-year government bond yields between Denmark and Germany had a correlation coefficient of 0.994, almost a perfect linear relationship. On the other hand, our analysis showed the Chinese Yuan and the Sri Lankan Rupee had a correlation coefficient of -0.84, a surprisingly strong negative association. Thus, in this report, we look to again use a correlation coefficient matrix (constructed in Python) to analyze the relationships between major stock market indices from around the world.</div>
+        <div class="artText"> The following major stock market indices were used in this snapshot report: the Bovespa (Brazil), the Dow Jones Industrial Average (or DJIA, United States), the Nikkei 225 (Japan), the Shanghai Composite Index (China), the STOXX Europe 50 (Eurozone), the CAC 40 (France), the Tel Aviv Stock Exchange Index (Israel), the IPC (Mexico), the MERVAL (Argentina), the DAX (Germany), the ASX 200 (Australia), the TSX Composite (Canada), the RTSI (Russia), the KOSPI (South Korea), the OMX Copenhagen 20 (Demark), the TWSE (Taiwan), the IBEX 35 (Spain), the ATX (Austria), and the SMI (Switzerland). For each stock market index used in this analysis, daily index prices going back to January of 2000 were included. </div>
+        <div class="artText"> All data used in this analysis was retrieved from either the Federal Reserve Economic Data Catalog (FRED) or Yahoo Finance. Note: all prices included in the dataset are opening prices for the given day. The correlation matrix for the prices of these stock market indices was determined using Python (with import pandas), and this matrix can be downloaded <a href='img/ CorrelationMatrix_StockIndicesAroundWorld.csv' target="_blank">here</a>. As always, the initial data of stock market index prices used in this snapshot analysis can be found at the bottom of the report.</div>
+        <div class="artText"> As outlined in previous analyses, the correlation coefficient of two market indices is simply the covariance of these indices divided by the product of the standard deviations of each stock market index. In mathematical terms, ρ<sub>X, Y</sub> = Cov<sub>X, Y</sub> ÷ (σ<sub>X</sub> * σ<sub>Y</sub>), where X and Y represent two different market indices in the dataset, ρ<sub>X, Y</sub> is the correlation coefficient between these two market indices, Cov<sub>X, Y</sub> represents the covariance of these market indices, and σ<sub>X</sub> * σ<sub>Y</sub> represents the product of the standard deviations of each index.</div>
+        <div class="artText"> Again, correlation coefficients range from -1 to 1. A correlation coefficient of 0 represents no association between two variables, whereas a value greater than 0 represents a positive association between two variables. A larger correlation represents a stronger association, too, with a value of 1 representing a perfect linear relationship between two variables.</div>
+        <div class="artText"> As seen in the correlation matrix, correlation coefficients have large swings from market index to market index. Numerous market indices even have negative correlations with each other. For example, in this dataset, historical prices of the STOXX Europe Index and historical prices of the French CAC 40 have a correlation coefficient over 0.98, almost a perfect linear relationship. This result is not surprising, however, since the STOXX Europe Index contains French equities. On the other hand, the STOXX Europe Index and Argentinian MERVAL Index have a correlation coefficient of -0.15 for this analysis, indicating a slightly negative association. Prices of the STOXX Europe Index also have negative correlations with historical prices of four other market indices in this analysis: the Mexican IPC (ρ <sub>IPC,STOXX</sub> = -0.06), the Brazilian Bovespa (ρ <sub>Bovespa,STOXX</sub> = -0.08), the South Korean KOSPI (ρ <sub>KOSPI,STOXX</sub> = -0.03), and the Israeli Tel Aviv Stock Exchange Index (ρ <sub>STOXX,TelAviv</sub> = -0.32). Historical prices of the DJIA have the <i>weakest</i> correlation with historical prices of the Tel Aviv Stock Exchange Index (ρ<sub>DJIA,TelAviv</sub> = 0.12), too. Interestingly, the historical prices of the DJIA have highest correlation with the Swiss Market Index in this dataset (ρ<sub>DJIA,SMI</sub> = 0.87).</div>
+        <div class="artText"> I recommend looking through all columns of this dataset, as each market index has interesting, unique correlations with other market indices. Although some correlations are expected, such as a high correlation between the Mexican IPC and Brazilian Bovespa Index (ρ<sub>Bovespa,IPC</sub> = 0.97), other correlations are unexpected. For example, surprisingly, this analysis indicates that the South Korean KOSPI has a correlation of 0.96 with the Mexican IPC and a correlation of 0.95 with the Brazilian Bovespa Index. I would not have expected South Korean equities to have such a strong positive association with Latin American equities, but the data shows my initial assumptions were wrong, at least for historical prices in this dataset. Similarly, historical prices of the Canadian TSX Composite Index have the highest correlation with historical prices of OMX Copenhagen 20 Index (ρ<sub>OMX,TSX</sub> = 0.94). Before this analysis, I assumed Canadian equities were most correlated to U.S. equities.</div>
+        <div class="artText"> Still, we have not addressed why these correlations are even useful to investors. Although historical trends are not necessarily accurate predictors of future trends, this correlation matrix is simply another tool for investors to add to their decision-making toolbox. This analysis revealed many non-trivial historical trends, such as high positive correlations between South Korean equities (KOSPI) and Latin American equities (IPC, MERVAL, Bovespa) and negative correlations between European equities (STOXX Europe) and Latin American equities. These trends can help guide an investor when constructing a future portfolio, as described below.</div>
+        <div class="artText"> When constructing a diversified portfolio with the lowest possible variance, investors often want to hedge risk by purchasing securities with negative correlations. Thus, the correlation matrix of this analysis can guide investors who are looking to hedge risk. For example, since Israeli equities (Tel Aviv Stock Exchange Index) and European equities (STOXX Europe) have a historical correlation of -0.32, a relatively strong negative association, European investors may consider adding Israeli equities to their portfolio to reduce risk without drastically lowering their expected return. Although market indices are becoming more and more positively associated in this globalized world, this analysis indicates negative correlations still exist in the market, and international equities can offer a valuable opportunity to diversify a portfolio and reduce risk.</div>
+
+
+        <div class="artText"> </div>
+
+
+
+
+      </article>
+
+
+      <div class="concludingPicture">  <img id= "endingPic" src="img/index3.jpg" width="724" height="409"/>  </div>
+
+      <div class="end"> Click <a href='img/MarketIndicesData.csv' target="_blank">here</a> to download the data used in this snapshot financial report.</div>
+
+    </div>
+  </body>
+
+  <script type="text/javascript" src="js/libs/jquery.sparkline.js"></script>
+  <script src="js/mylibs/script.js"></script>
+
+  <script type="text/javascript">
+
+    $(function () {
+      $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+          Highcharts.stockChart('currGraph', {
+              rangeSelector: {
+                  selected: 1
+              },
+              title: {
+                  text: 'AAPL Stock Price'
+              },
+              series: [{
+                  name: 'AAPL',
+                  data: data,
+                  tooltip: {
+                      valueDecimals: 2
+                  }
+              }]
+          });
+      });
+
+    });
+</script>
